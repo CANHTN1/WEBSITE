@@ -1,0 +1,105 @@
+/** FOOTER **/
+
+.footer {
+    &-top {
+        background-color: #3E3E3F;
+        padding: 80px 0 40px 0;
+        &__menu {
+            width: 53%;
+            flex: 0 0 auto;
+            @include breakpoint(1023) {
+                width: 100%;
+                order: 2;
+            }
+            ul {
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        color: #fff;
+                        &:hover {
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+        &__info {
+            width: 26.5%;
+            flex: 0 0 auto;
+            @include breakpoint(1023) {
+                width: 50%;
+            }
+            @include breakpoint(767) {
+                width: 100%;
+            }
+            &-content {
+                line-height: 1.46;
+            }
+        }
+        &__info-social {
+            width: 20.5%;
+            flex: 0 0 auto;
+            @include breakpoint(1023) {
+                width: 50%;
+            }
+            @include breakpoint(767) {
+                width: 100%;
+                order: 3;
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        color: #fff;
+                        span {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 8px;
+                            background-color: #fff;
+                            margin-right: 14px;
+                            svg {
+                                color: #3E4A56;
+                            }
+                        }
+                        &.facebook-color {
+                            &:hover {
+                                color: #1778f2;
+                                svg {
+                                    color: #1778f2;
+                                }
+                            }
+                        }
+                        &.zalo-color {
+                            &:hover {
+                                color: #008ff3;
+                                svg {
+                                    color: #008ff3;
+                                }
+                            }
+                        }
+                        &.instagram-color {
+                            &:hover {
+                                color: #405DE6;
+                                svg {
+                                    color: #405DE6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-bottom {
+        background-color: #303030;
+        color: #c1c1c1;
+        font-family: Mulish;
+        padding: 19px;
+    }
+    &-item__title {
+        margin-bottom: 30px;
+        @include breakpoint(767) {
+            margin-bottom: 10px;
+        }
+    }
+}

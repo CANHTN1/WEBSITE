@@ -1,0 +1,30 @@
+/** Breadcrumb **/
+
+#breadcrumbs {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    a {
+        color: var(--light-grey);
+        &:hover {
+            color: #dc3545;
+        }
+    }
+    .breadcrumb-separate {
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: var(--light-grey);
+        margin: 0 10px;
+        display: inline-block;
+        -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    .breadcrumb-home {
+        content: url(../svg/home.svg);
+        display: inline-block;
+    }
+}

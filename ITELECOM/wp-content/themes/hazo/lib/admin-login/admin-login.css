@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Sarabun;
+    src: url(../font/Sarabun-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Sarabun;
+    src: url(../font/Sarabun-Bold.ttf);
+    font-weight: 700;
+}
+
+html,
+body {
+    font-family: 'Sarabun';
+    font-size: 15px;
+    color: #333;
+    line-height: 1.4;
+}
+
+body.login {
+    background: url(../images/login-admin.png) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+    body.login {
+        background: #EFEFEF;
+    }
+}
+
+.login #nav {
+    margin-top: 15px!important;
+}
+
+.privacy-policy-link,
+.login #backtoblog a,
+.login #nav a {
+    color: #333;
+}
+
+#login h1 a {
+    background-image: url(../images/hazomedia.svg);
+    width: 250px;
+    background-size: 100% auto;
+    margin-bottom: 20px;
+    height: 62px;
+}
+
+#wp-submit {
+    background: #fff;
+    border: none;
+    color: white;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    color: #D42027;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    border: 1px solid #D42027;
+}
+
+#wp-submit:hover {
+    background-color: #d42027;
+    color: #fff;
+    border-color: #fff;
+}
+
+.login form {
+    background: #D42027;
+}
+
+.login form .input,
+.login input[type=text] {
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+    color: rgb(0, 0, 0) !important;
+    font-size: 16px;
+    background: rgb(232, 240, 254);
+}
+
+#login_error {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#loginform {
+    position: relative !important;
+    overflow: initial;
+}
+
+#holine_kt,
+#holine_kd {
+    position: absolute;
+    width: 330px;
+    left: calc(100% + 5px);
+    background: #c80810b3;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    height: 90%;
+}
+
+#holine_kt {
+    left: initial;
+    right: calc(100% + 5px);
+}
+
+#loginform .submit {
+    overflow: hidden;
+}
+
+#holine_kt h2,
+#holine_kd h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    color: #FFF;
+}
+
+#holine_kt h3,
+#holine_kd h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+#holine_kt>div,
+#holine_kd>div {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+#holine_kt>div i,
+#holine_kd>div i {
+    font-size: 13px;
+    min-width: 20px;
+    color: #FFF;
+}
+
+.title {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#login {
+    width: 400px;
+    max-width: 95%;
+    padding: 6% 0 0 0 !important;
+    /* background: rgba( 0,0,0,0.6); */
+}
+
+@media screen and (max-height:650px) {
+    #login {
+        padding: 3% 0 0 0 !important;
+    }
+}
+
+.login .privacy-policy-page-link {
+    margin: 0 0 2em !important;
+}
+
+@media (max-width: 1070px) {
+    #holine_kt,
+    #holine_kd {
+        position: static;
+        box-shadow: none;
+        display: none;
+    }
+}
+
+.title,
+.login label,
+.login form .forgetmenot label {
+    color: #FFF;
+}

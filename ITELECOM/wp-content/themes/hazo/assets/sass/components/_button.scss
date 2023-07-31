@@ -1,0 +1,36 @@
+.button {
+    padding: 11px 49px;
+    border-radius: 4px;
+    display: inline-block;
+    -webkit-transition: color .3s, background-color .3s, box-shadow .3s;
+    -o-transition: color .3s, background-color .3s, box-shadow .3s;
+    transition: color .3s, background-color .3s, box-shadow .3s;
+    font-family: Mulish;
+    line-height: 1;
+    border: none;
+    outline: none;
+    @include breakpoint(767) {
+        padding: 11px 25px;
+    }
+    &--primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        font-weight: 700;
+        @media(hover) {
+            &:hover {
+                background-color: #ffc107;
+                color: #333;
+            }
+        }
+    }
+    &--shadow {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &--center {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}

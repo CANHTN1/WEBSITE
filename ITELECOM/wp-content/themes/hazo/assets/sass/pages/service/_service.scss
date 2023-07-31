@@ -1,0 +1,260 @@
+.service {
+    padding: 40px 0px 80px 0;
+    @include breakpoint(767) {
+        padding: 40px 0;
+    }
+    &-item {
+        height: 100%;
+        border: 1px solid #c4c4c4;
+        border-top: 8px solid var(--primary-color);
+        border-radius: 8px;
+        padding: 24px 24px 40px 24px;
+        -webkit-transition: background-color .3s;
+        -o-transition: background-color .3s;
+        transition: background-color .3s;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(767) {
+            padding: 15px;
+        }
+        &__icon {
+            width: 140px;
+            height: 140px;
+            border: 1px solid #c4c4c4;
+            margin: 0 auto 30px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+            svg {
+                width: 45%;
+                height: 45%;
+            }
+            @include breakpoint(1199) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &__title {
+            margin-bottom: 20px;
+            display: -webkit-box!important;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2 !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include breakpoint(767) {
+                margin-bottom: 10px;
+            }
+        }
+        &__image {
+            border: 1px solid #c4c4c4;
+            padding-bottom: 50%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            @include breakpoint(1199) {
+                display: none;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__content {
+            margin-top: auto;
+            &-inner {
+                display: none;
+                color: #fff;
+                @include breakpoint(1199) {
+                    display: block;
+                    color: var(--grey);
+                }
+            }
+        }
+        &__desc {
+            margin-bottom: 40px;
+            display: -webkit-box!important;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4 !important;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include breakpoint(767) {
+                margin-bottom: 15px;
+            }
+        }
+        .button {
+            background-color: #fff;
+            color: var(--primary-color);
+            &:hover {
+                color: #333;
+                background-color: #ffc107;
+            }
+        }
+        @media(hover) {
+            &:hover {
+                background-color: var(--primary-color);
+            }
+            &:hover &__title {
+                color: #fff;
+            }
+            &:hover &__content-inner {
+                display: block;
+            }
+            &:hover &__image {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/** SERVICE DETAIL **/
+
+.service-detail {
+    background-color: #ececec;
+    padding: 57px 0px 80px 0;
+    @include breakpoint(1023) {
+        padding: 40px 0;
+    }
+    &__content {
+        background-color: #fff;
+        padding: 24px 40px;
+        @include breakpoint(767) {
+            padding: 25px 15px;
+        }
+    }
+}
+
+.service-block__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.service-detail__table {
+    table {
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 10px 10px;
+        thead {
+            th {
+                padding: 22px!important;
+                font-family: Mulish;
+                font-size: 24px;
+                text-align: center;
+                background-color: var(--primary-color);
+                color: #fff;
+                font-weight: 500;
+                @include breakpoint(1023) {
+                    font-size: 20px;
+                }
+                @include breakpoint(767) {
+                    font-size: 18px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+        tbody {}
+    }
+    table>tbody>tr>td,
+    table>tbody>tr>th,
+    table>tfoot>tr>td,
+    table>tfoot>tr>th,
+    table>thead>tr>td,
+    table>thead>tr>th {
+        border: 1px solid #ddd;
+        padding: 7px 10px;
+    }
+    .button {
+        padding: 17px 62px;
+        margin-top: 24px;
+    }
+}
+
+.service-sidebar-button {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    padding: 8px 14px;
+    border-radius: unset;
+    svg {
+        margin-left: 10px;
+        path {
+            stroke: #fff;
+        }
+    }
+}
+
+
+/** SERVICE PROCEDURE **/
+
+.service-procedure {
+    padding: 60px 0px 30px 0;
+    &__image {
+        @include breakpoint(767) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+/** BENEFIT **/
+
+.service-benefit-item {
+    margin-bottom: 24px;
+    .item__image {
+        width: 69px;
+        height: 69px;
+        flex: 0 0 auto;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .item__content {
+        width: calc(100% - 69px);
+        flex: 0 0 auto;
+        padding-left: 12px;
+    }
+}
+
+
+/** PROMOTION **/
+
+.service-promotion {
+    padding: 58px 27px;
+    @include breakpoint(767) {
+        padding: 30px 24px;
+    }
+    &__title {
+        width: 75%;
+        flex: 0 0 auto;
+        padding: 0px 10px;
+        @include breakpoint(767) {
+            width: 100%;
+        }
+    }
+    &__button {
+        width: 25%;
+        flex: 0 0 auto;
+        @include breakpoint(767) {
+            width: 100%;
+        }
+        .button {
+            max-width: 100%;
+            padding: 16.5px 42px;
+            @include breakpoint(1199) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
