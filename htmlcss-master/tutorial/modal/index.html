@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Modal Popup Html, Css, Js</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.3;
+        }
+        #wrapper{
+            min-height: 100vh;
+        }
+        button#btn-open{
+            background: rgb(8, 133, 229);
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            box-shadow: 0px 2px 4px rgba(0, 0,0,0.5);
+        }
+        #modal-container{
+            height: 100vh;
+            background: rgba(0, 0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.25s ease-in-out;
+            
+        }
+        #modal-container.show{
+            opacity: 1;
+            pointer-events: all;
+        }
+        #modal-container.show .modal{
+            top: 100px;
+        }
+        .modal{
+            background: #fff;
+            max-width: 500px;
+            position: relative;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.25s ease-in-out;
+        }
+        
+        .modal .modal-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dedede;
+        }
+        .modal .modal-header h3{
+            margin: 0;
+        }
+        button#btn-close{
+            outline: none;
+            border: none;
+            background: none;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        .modal .modal-body{
+            padding: 10px 20px 15px;
+        }
+
+    </style>
+    <div id="wrapper">
+        <h1>Tạo Modal với html, css, js</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas molestias fugiat, dolor eaque cupiditate nihil? Neque quam, consectetur eos id in nesciunt praesentium error ex culpa illum velit repellendus porro!</p>
+        <button id="btn-open">Click Here Open Modal</button>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe amet eos quos. Minus accusantium nesciunt illo quos voluptatibus obcaecati illum? Facilis dolor cum consequatur eius quo deserunt obcaecati aperiam voluptate!</p>
+        <!-- Modal  -->
+        <div id="modal-container">
+            <div class="modal" id="modal-demo">
+                <div class="modal-header">
+                    <h3>Modal Title</h3>
+                    <button id="btn-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem deserunt, voluptatum dicta quisquam veniam reiciendis quo quia. Saepe ad quod sequi. Commodi culpa repudiandae enim, dolorum ratione assumenda cum sit!</p>
+                </div>
+            </div>
+        </div>
+        <!-- End modal  -->
+    </div>
+    <script>
+        const btn_open = document.getElementById('btn-open');
+        const btn_close = document.getElementById('btn-close');
+        const modal_container = document.getElementById('modal-container');
+        const modal_demo = document.getElementById('modal-demo');
+
+        btn_open.addEventListener('click', ()=>{
+            modal_container.classList.add('show');
+        });
+        btn_close.addEventListener('click', ()=>{
+            modal_container.classList.remove('show');
+        });
+
+        modal_container.addEventListener('click', (e)=>{
+            if(!modal_demo.contains(e.target)){
+                btn_close.click();
+            }
+            // console.log(e.target);
+        });
+    </script>
+</body>
+</html>

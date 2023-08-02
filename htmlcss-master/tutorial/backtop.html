@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <title>Tạo backtop website với html css, jquery</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-size: 17px;
+            line-height: 1.2;
+        }
+        
+        #wrapper {
+            width: 960px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            background: tomato;
+            text-align: center;
+        }
+        
+        #backtop {
+            width: 50px;
+            height: 50px;
+            background: tomato;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Header website</h1>
+        </div>
+        <div id="content">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, porro.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia explicabo consequatur nisi autem optio nesciunt voluptates odio doloremque, sunt odit ratione adipisci repellendus quibusdam vero impedit officia vitae expedita dolorum pariatur
+                dolor laudantium? Error debitis, voluptatum dolor atque reprehenderit unde?</p>
+            <p>Voluptatibus numquam ex dolor laborum. Autem velit quod, veritatis labore quia nisi aliquid? Aspernatur corrupti ex quo, doloremque commodi voluptatum maxime perspiciatis dolore animi porro consequatur error. Pariatur impedit blanditiis aut
+                in repudiandae nostrum alias? Incidunt laborum quas cumque tempora.</p>
+            <p>Quae eligendi quod esse inventore ad necessitatibus repudiandae accusamus veniam magni quam vel porro, nulla similique explicabo earum corporis, odit, totam voluptas harum non suscipit voluptates soluta libero quos? Corrupti aperiam nobis
+                expedita molestias distinctio omnis iste aut, quam impedit.</p>
+            <p>Qui dolor itaque aut eius quisquam corporis, harum natus maiores ullam unde laudantium necessitatibus nisi mollitia provident atque amet ducimus hic culpa soluta. Deleniti nisi, eaque eum facere quae dignissimos vitae sunt provident asperiores
+                nostrum unde dolore quia nulla rerum?</p>
+            <p>Ea alias nobis doloremque dolorem repudiandae maxime rerum repellendus. Mollitia earum magnam tenetur, praesentium quasi blanditiis dolor, dignissimos quod corporis ducimus consectetur aliquid! Sit soluta iste dignissimos cupiditate? Dolore
+                voluptatibus quaerat velit beatae sunt, veniam ab obcaecati perferendis vero aliquam.
+            </p>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, porro.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia explicabo consequatur nisi autem optio nesciunt voluptates odio doloremque, sunt odit ratione adipisci repellendus quibusdam vero impedit officia vitae expedita dolorum pariatur
+                dolor laudantium? Error debitis, voluptatum dolor atque reprehenderit unde?</p>
+            <p>Voluptatibus numquam ex dolor laborum. Autem velit quod, veritatis labore quia nisi aliquid? Aspernatur corrupti ex quo, doloremque commodi voluptatum maxime perspiciatis dolore animi porro consequatur error. Pariatur impedit blanditiis aut
+                in repudiandae nostrum alias? Incidunt laborum quas cumque tempora.</p>
+            <p>Quae eligendi quod esse inventore ad necessitatibus repudiandae accusamus veniam magni quam vel porro, nulla similique explicabo earum corporis, odit, totam voluptas harum non suscipit voluptates soluta libero quos? Corrupti aperiam nobis
+                expedita molestias distinctio omnis iste aut, quam impedit.</p>
+            <p>Qui dolor itaque aut eius quisquam corporis, harum natus maiores ullam unde laudantium necessitatibus nisi mollitia provident atque amet ducimus hic culpa soluta. Deleniti nisi, eaque eum facere quae dignissimos vitae sunt provident asperiores
+                nostrum unde dolore quia nulla rerum?</p>
+            <p>Ea alias nobis doloremque dolorem repudiandae maxime rerum repellendus. Mollitia earum magnam tenetur, praesentium quasi blanditiis dolor, dignissimos quod corporis ducimus consectetur aliquid! Sit soluta iste dignissimos cupiditate? Dolore
+                voluptatibus quaerat velit beatae sunt, veniam ab obcaecati perferendis vero aliquam.
+            </p>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, porro.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia explicabo consequatur nisi autem optio nesciunt voluptates odio doloremque, sunt odit ratione adipisci repellendus quibusdam vero impedit officia vitae expedita dolorum pariatur
+                dolor laudantium? Error debitis, voluptatum dolor atque reprehenderit unde?</p>
+            <p>Voluptatibus numquam ex dolor laborum. Autem velit quod, veritatis labore quia nisi aliquid? Aspernatur corrupti ex quo, doloremque commodi voluptatum maxime perspiciatis dolore animi porro consequatur error. Pariatur impedit blanditiis aut
+                in repudiandae nostrum alias? Incidunt laborum quas cumque tempora.</p>
+            <p>Quae eligendi quod esse inventore ad necessitatibus repudiandae accusamus veniam magni quam vel porro, nulla similique explicabo earum corporis, odit, totam voluptas harum non suscipit voluptates soluta libero quos? Corrupti aperiam nobis
+                expedita molestias distinctio omnis iste aut, quam impedit.</p>
+            <p>Qui dolor itaque aut eius quisquam corporis, harum natus maiores ullam unde laudantium necessitatibus nisi mollitia provident atque amet ducimus hic culpa soluta. Deleniti nisi, eaque eum facere quae dignissimos vitae sunt provident asperiores
+                nostrum unde dolore quia nulla rerum?</p>
+            <p>Ea alias nobis doloremque dolorem repudiandae maxime rerum repellendus. Mollitia earum magnam tenetur, praesentium quasi blanditiis dolor, dignissimos quod corporis ducimus consectetur aliquid! Sit soluta iste dignissimos cupiditate? Dolore
+                voluptatibus quaerat velit beatae sunt, veniam ab obcaecati perferendis vero aliquam.
+            </p>
+        </div>
+    </div>
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop()) {
+                $('#backtop').fadeIn();
+            } else {
+                $('#backtop').fadeOut();
+            }
+        });
+        $("#backtop").click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+    });
+</script>
+
+</html>

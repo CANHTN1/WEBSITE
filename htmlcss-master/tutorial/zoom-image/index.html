@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiệu ứng zoom ảnh html css</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        
+        ul.list-person {
+            display: flex;
+        }
+        
+        ul.list-person li {
+            max-width: 524px;
+            overflow: hidden;
+        }
+        
+        ul.list-person li a img {
+            display: block;
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        ul.list-person li a {
+            position: relative;
+            display: block;
+        }
+        
+        ul.list-person li:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        
+        ul.list-person li a .name {
+            position: absolute;
+            color: #333;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 30px;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+        
+        ul.list-person li a:hover .name {
+            bottom: 40%;
+            opacity: 1;
+        }
+    </style>
+    <div id="wrapper">
+        <ul class="list-person">
+            <li>
+                <a href="">
+                    <img src="images/set1-person1-845x684.jpg" alt="">
+                    <div class="name">Peter</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="images/set1-person2-845x684.jpg" alt="">
+                    <div class="name">Marry</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

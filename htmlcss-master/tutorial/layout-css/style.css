@@ -1,0 +1,37 @@
+
+
+#wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#header{
+    background: rgb(4, 190, 20);
+    text-align: center;
+    padding: 5px;
+}
+
+
+#footer{
+    background: gray;
+    padding: 15px;
+}
+
+
+#wp-content{
+    display: flex;
+    min-height: 600px;
+}
+
+#content{
+    flex-basis: 70%;
+}
+#sidebar{
+    flex-basis: 30%;
+    background: #f5f5f5;
+    padding: 10px 15px;
+}
+.list-course{
+    padding-left: 0px;
+    list-style: none;
+}

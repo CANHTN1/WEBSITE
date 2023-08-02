@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Tạo accordion thu gọn nội dung với Html, Css, Jquery</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrapper {
+            max-width: 600px;
+            margin: 0px auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e4e4e4;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .accordion-item.active .accordion-header {
+            background: #0c81bb;
+            color: #fff;
+        }
+        
+        .arrow {
+            transition: all 0.3s;
+        }
+        
+        .accordion-item.active .arrow {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-body {
+            padding: 10px 10px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.accordion-item.active .accordion-body').slideDown();
+            $('.accordion-header').click(function() {
+                $(this).parent().toggleClass('active');
+                $(this).parent().children('.accordion-body').slideToggle();
+            });
+        });
+    </script>
+    <div id="wrapper">
+        <h1>Tạo accordion thu gọn nội dung với Html, Css, Jquery</h1>
+        <div class="accordion">
+            <div class="accordion-item active">
+                <div class="accordion-header">
+                    <h3>Tiêu đề 1</h3>
+                    <i class="arrow fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id inventore, dolore consectetur esse quae atque illum tempora tempore fugit officiis harum eligendi corrupti praesentium culpa quos et delectus fuga minima debitis voluptas ratione deserunt labore,
+                    amet temporibus! Consequatur, eligendi reprehenderit!
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Tiêu đề 2</h3>
+                    <i class="arrow fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id inventore, dolore consectetur esse quae atque illum tempora tempore fugit officiis harum eligendi corrupti praesentium culpa quos et delectus fuga minima debitis voluptas ratione deserunt labore,
+                    amet temporibus! Consequatur, eligendi reprehenderit!
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3>Tiêu đề 3</h3>
+                    <i class="arrow fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id inventore, dolore consectetur esse quae atque illum tempora tempore fugit officiis harum eligendi corrupti praesentium culpa quos et delectus fuga minima debitis voluptas ratione deserunt labore,
+                    amet temporibus! Consequatur, eligendi reprehenderit!
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

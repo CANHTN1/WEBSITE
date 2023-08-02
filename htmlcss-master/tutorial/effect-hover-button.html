@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect hover button</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #wrapper {
+            max-width: 960px;
+            display: flex;
+            justify-content: center;
+            margin: 0px auto;
+        }
+        
+        .btn {
+            margin-top: 30px;
+            padding: 15px 25px;
+            border: 1px solid #333;
+            display: inline-block;
+            text-transform: uppercase;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: crimson;
+            left: -100%;
+            top: 0;
+            transition: all 0.3s ease-in-out;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 0;
+        }
+        
+        .btn span {
+            z-index: 10;
+        }
+        
+        .btn:hover span {
+            transition: all 0.3s ease-in-out;
+            color: #fff;
+        }
+    </style>
+    <div id="wrapper">
+        <a href="" class="btn">
+            <span>Tìm hiểu thêm</span>
+        </a>
+    </div>
+</body>
+
+</html>

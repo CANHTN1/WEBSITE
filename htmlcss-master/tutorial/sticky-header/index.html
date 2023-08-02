@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cố định header khi scroll thanh cuộn</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="inner-header container">
+                <a href="" id="logo">Unitop</a>
+                <nav>
+                    <ul id="main-menu">
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Sản phẩm</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="banner">
+
+        </div>
+        <div id="content" class="container">
+            <h1>Cố định header khi scroll thanh cuộn bằng html css jquery</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio reiciendis earum exercitationem incidunt, quasi animi neque vitae, voluptatem atque minus placeat quisquam reprehenderit unde. Molestiae libero dolores fuga commodi consectetur
+                sunt, veritatis expedita ipsa, saepe maxime veniam iure, laborum nesciunt sequi sed nobis? Corrupti esse veniam aliquid eligendi dolor quam hic, eaque voluptatum quisquam, aliquam dolore natus facere sapiente, minima illum sed. Sit quos
+                minima temporibus magnam, porro incidunt eligendi recusandae blanditiis nobis est at repellat modi voluptatem laudantium quas molestias quaerat quae quibusdam quod ullam, cupiditate officia reiciendis? Quasi voluptatem fugit recusandae
+                non quisquam. Autem eligendi nulla animi beatae!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio reiciendis earum exercitationem incidunt, quasi animi neque vitae, voluptatem atque minus placeat quisquam reprehenderit unde. Molestiae libero dolores fuga commodi consectetur
+                sunt, veritatis expedita ipsa, saepe maxime veniam iure, laborum nesciunt sequi sed nobis? Corrupti esse veniam aliquid eligendi dolor quam hic, eaque voluptatum quisquam, aliquam dolore natus facere sapiente, minima illum sed. Sit quos
+                minima temporibus magnam, porro incidunt eligendi recusandae blanditiis nobis est at repellat modi voluptatem laudantium quas molestias quaerat quae quibusdam quod ullam, cupiditate officia reiciendis? Quasi voluptatem fugit recusandae
+                non quisquam. Autem eligendi nulla animi beatae!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio reiciendis earum exercitationem incidunt, quasi animi neque vitae, voluptatem atque minus placeat quisquam reprehenderit unde. Molestiae libero dolores fuga commodi consectetur
+                sunt, veritatis expedita ipsa, saepe maxime veniam iure, laborum nesciunt sequi sed nobis? Corrupti esse veniam aliquid eligendi dolor quam hic, eaque voluptatum quisquam, aliquam dolore natus facere sapiente, minima illum sed. Sit quos
+                minima temporibus magnam, porro incidunt eligendi recusandae blanditiis nobis est at repellat modi voluptatem laudantium quas molestias quaerat quae quibusdam quod ullam, cupiditate officia reiciendis? Quasi voluptatem fugit recusandae
+                non quisquam. Autem eligendi nulla animi beatae!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio reiciendis earum exercitationem incidunt, quasi animi neque vitae, voluptatem atque minus placeat quisquam reprehenderit unde. Molestiae libero dolores fuga commodi consectetur
+                sunt, veritatis expedita ipsa, saepe maxime veniam iure, laborum nesciunt sequi sed nobis? Corrupti esse veniam aliquid eligendi dolor quam hic, eaque voluptatum quisquam, aliquam dolore natus facere sapiente, minima illum sed. Sit quos
+                minima temporibus magnam, porro incidunt eligendi recusandae blanditiis nobis est at repellat modi voluptatem laudantium quas molestias quaerat quae quibusdam quod ullam, cupiditate officia reiciendis? Quasi voluptatem fugit recusandae
+                non quisquam. Autem eligendi nulla animi beatae!</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop()) {
+                    $('header').addClass('sticky');
+                } else {
+                    $('header').removeClass('sticky');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
